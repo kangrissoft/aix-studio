@@ -1,0 +1,362 @@
+/* Theme Styles for AIX Studio */
+
+/* Light Theme (Default) */
+.theme-light {
+  --theme-primary: var(--primary-color);
+  --theme-primary-dark: var(--primary-dark);
+  --theme-primary-light: var(--primary-light);
+  --theme-secondary: var(--secondary-color);
+  --theme-success: var(--success-color);
+  --theme-warning: var(--warning-color);
+  --theme-error: var(--error-color);
+  --theme-info: var(--info-color);
+  
+  --theme-bg: var(--white);
+  --theme-bg-secondary: var(--gray-50);
+  --theme-bg-tertiary: var(--gray-100);
+  
+  --theme-text: var(--gray-900);
+  --theme-text-secondary: var(--gray-700);
+  --theme-text-tertiary: var(--gray-500);
+  
+  --theme-border: var(--gray-200);
+  --theme-border-hover: var(--gray-300);
+  --theme-border-focus: var(--primary-color);
+  
+  --theme-shadow: var(--shadow-md);
+  --theme-shadow-hover: var(--shadow-lg);
+  
+  --theme-scrollbar: var(--gray-300);
+  --theme-scrollbar-thumb: var(--gray-400);
+  
+  --theme-code-bg: var(--gray-50);
+  --theme-code-text: var(--gray-800);
+  
+  --theme-editor-bg: var(--white);
+  --theme-editor-text: var(--gray-900);
+  --theme-editor-selection: var(--primary-light);
+  
+  --theme-terminal-bg: var(--gray-900);
+  --theme-terminal-text: var(--gray-100);
+}
+
+/* Dark Theme */
+.theme-dark {
+  --theme-primary: var(--primary-light);
+  --theme-primary-dark: var(--primary-color);
+  --theme-primary-light: var(--primary-light);
+  --theme-secondary: var(--secondary-color);
+  --theme-success: var(--success-color);
+  --theme-warning: var(--warning-color);
+  --theme-error: var(--error-color);
+  --theme-info: var(--info-color);
+  
+  --theme-bg: #1e1e1e;
+  --theme-bg-secondary: #2d2d30;
+  --theme-bg-tertiary: #3c3c40;
+  
+  --theme-text: var(--gray-100);
+  --theme-text-secondary: var(--gray-300);
+  --theme-text-tertiary: var(--gray-500);
+  
+  --theme-border: #3c3c40;
+  --theme-border-hover: #4d4d50;
+  --theme-border-focus: var(--primary-light);
+  
+  --theme-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --theme-shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.4);
+  
+  --theme-scrollbar: #3c3c40;
+  --theme-scrollbar-thumb: #555555;
+  
+  --theme-code-bg: #2d2d30;
+  --theme-code-text: var(--gray-200);
+  
+  --theme-editor-bg: #1e1e1e;
+  --theme-editor-text: var(--gray-100);
+  --theme-editor-selection: #264f78;
+  
+  --theme-terminal-bg: #000000;
+  --theme-terminal-text: var(--gray-100);
+}
+
+/* Blue Theme */
+.theme-blue {
+  --theme-primary: #007acc;
+  --theme-primary-dark: #005a9e;
+  --theme-primary-light: #64b5f6;
+  --theme-secondary: #ff4081;
+  --theme-success: #4caf50;
+  --theme-warning: #ffb300;
+  --theme-error: #f44336;
+  --theme-info: #2196f3;
+  
+  --theme-bg: #f3f9ff;
+  --theme-bg-secondary: #e3f2fd;
+  --theme-bg-tertiary: #bbdefb;
+  
+  --theme-text: #0d47a1;
+  --theme-text-secondary: #1565c0;
+  --theme-text-tertiary: #1976d2;
+  
+  --theme-border: #90caf9;
+  --theme-border-hover: #64b5f6;
+  --theme-border-focus: #007acc;
+  
+  --theme-shadow: 0 2px 8px rgba(0, 122, 204, 0.15);
+  --theme-shadow-hover: 0 4px 12px rgba(0, 122, 204, 0.25);
+  
+  --theme-scrollbar: #bbdefb;
+  --theme-scrollbar-thumb: #90caf9;
+  
+  --theme-code-bg: #e3f2fd;
+  --theme-code-text: #0d47a1;
+  
+  --theme-editor-bg: #ffffff;
+  --theme-editor-text: #0d47a1;
+  --theme-editor-selection: #e3f2fd;
+  
+  --theme-terminal-bg: #0d47a1;
+  --theme-terminal-text: #ffffff;
+}
+
+/* Green Theme */
+.theme-green {
+  --theme-primary: #388e3c;
+  --theme-primary-dark: #1b5e20;
+  --theme-primary-light: #81c784;
+  --theme-secondary: #ff4081;
+  --theme-success: #4caf50;
+  --theme-warning: #ffb300;
+  --theme-error: #f44336;
+  --theme-info: #2196f3;
+  
+  --theme-bg: #f1f8e9;
+  --theme-bg-secondary: #e8f5e9;
+  --theme-bg-tertiary: #c8e6c9;
+  
+  --theme-text: #1b5e20;
+  --theme-text-secondary: #2e7d32;
+  --theme-text-tertiary: #388e3c;
+  
+  --theme-border: #a5d6a7;
+  --theme-border-hover: #81c784;
+  --theme-border-focus: #388e3c;
+  
+  --theme-shadow: 0 2px 8px rgba(56, 142, 60, 0.15);
+  --theme-shadow-hover: 0 4px 12px rgba(56, 142, 60, 0.25);
+  
+  --theme-scrollbar: #c8e6c9;
+  --theme-scrollbar-thumb: #a5d6a7;
+  
+  --theme-code-bg: #e8f5e9;
+  --theme-code-text: #1b5e20;
+  
+  --theme-editor-bg: #ffffff;
+  --theme-editor-text: #1b5e20;
+  --theme-editor-selection: #e8f5e9;
+  
+  --theme-terminal-bg: #1b5e20;
+  --theme-terminal-text: #ffffff;
+}
+
+/* High Contrast Theme */
+.theme-high-contrast {
+  --theme-primary: #ffff00;
+  --theme-primary-dark: #cccc00;
+  --theme-primary-light: #ffff66;
+  --theme-secondary: #ff00ff;
+  --theme-success: #00ff00;
+  --theme-warning: #ff9900;
+  --theme-error: #ff0000;
+  --theme-info: #00ffff;
+  
+  --theme-bg: #000000;
+  --theme-bg-secondary: #1a1a1a;
+  --theme-bg-tertiary: #333333;
+  
+  --theme-text: #ffffff;
+  --theme-text-secondary: #e6e6e6;
+  --theme-text-tertiary: #cccccc;
+  
+  --theme-border: #ffffff;
+  --theme-border-hover: #ffff00;
+  --theme-border-focus: #ffff00;
+  
+  --theme-shadow: 0 0 0 2px #ffffff;
+  --theme-shadow-hover: 0 0 0 3px #ffff00;
+  
+  --theme-scrollbar: #333333;
+  --theme-scrollbar-thumb: #666666;
+  
+  --theme-code-bg: #1a1a1a;
+  --theme-code-text: #ffffff;
+  
+  --theme-editor-bg: #000000;
+  --theme-editor-text: #ffffff;
+  --theme-editor-selection: #333333;
+  
+  --theme-terminal-bg: #000000;
+  --theme-terminal-text: #ffffff;
+}
+
+/* Theme Application */
+body.theme-light {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+body.theme-dark {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+body.theme-blue {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+body.theme-green {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+body.theme-high-contrast {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+/* Theme-specific component styling */
+.theme-light .ant-btn-primary {
+  background-color: var(--theme-primary);
+  border-color: var(--theme-primary);
+}
+
+.theme-dark .ant-btn-primary {
+  background-color: var(--theme-primary);
+  border-color: var(--theme-primary);
+  color: var(--theme-bg);
+}
+
+.theme-blue .ant-btn-primary {
+  background-color: var(--theme-primary);
+  border-color: var(--theme-primary);
+}
+
+.theme-green .ant-btn-primary {
+  background-color: var(--theme-primary);
+  border-color: var(--theme-primary);
+}
+
+.theme-high-contrast .ant-btn-primary {
+  background-color: var(--theme-primary);
+  border-color: var(--theme-primary);
+  color: var(--theme-bg);
+}
+
+/* Editor theme overrides */
+.theme-dark .monaco-editor {
+  background-color: var(--theme-editor-bg) !important;
+  color: var(--theme-editor-text) !important;
+}
+
+.theme-dark .monaco-editor .margin {
+  background-color: var(--theme-editor-bg) !important;
+}
+
+/* Terminal theme overrides */
+.theme-dark .terminal {
+  background-color: var(--theme-terminal-bg) !important;
+  color: var(--theme-terminal-text) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-scrollbar);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--theme-editor-selection);
+}
+
+/* Focus styling */
+:focus {
+  outline: 2px solid var(--theme-border-focus);
+  outline-offset: 1px;
+}
+
+/* Theme switcher component */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  background-color: var(--theme-bg-secondary);
+}
+
+.theme-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.theme-option:hover {
+  transform: scale(1.1);
+}
+
+.theme-option.active {
+  border-color: var(--theme-border-focus);
+  box-shadow: var(--theme-shadow);
+}
+
+.theme-option.light {
+  background: linear-gradient(135deg, #ffffff 50%, #f5f5f5 50%);
+}
+
+.theme-option.dark {
+  background: linear-gradient(135deg, #1e1e1e 50%, #2d2d30 50%);
+}
+
+.theme-option.blue {
+  background: linear-gradient(135deg, #e3f2fd 50%, #bbdefb 50%);
+}
+
+.theme-option.green {
+  background: linear-gradient(135deg, #e8f5e9 50%, #c8e6c9 50%);
+}
+
+.theme-option.high-contrast {
+  background: linear-gradient(135deg, #000000 50%, #ffffff 50%);
+  border: 1px solid #ffffff;
+}
+
+/* Responsive theme adjustments */
+@media (max-width: var(--breakpoint-md)) {
+  .theme-switcher {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .theme-option {
+    width: 20px;
+    height: 20px;
+  }
+}

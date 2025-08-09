@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  aix-studio:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./projects:/app/projects
+      - ./uploads:/app/uploads
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    restart: unless-stopped

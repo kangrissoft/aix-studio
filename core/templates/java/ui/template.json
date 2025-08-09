@@ -1,0 +1,23 @@
+{
+  "name": "UI Extension (Java)",
+  "description": "User interface extension template using Java",
+  "author": "AIX Studio Team",
+  "version": "1.0.0",
+  "language": "java",
+  "category": "ui",
+  "files": [
+    "build.xml",
+    "src/{{packagePath}}/{{className}}.java",
+    "assets/images/extension.png",
+    "README.md"
+  ],
+  "dependencies": [
+    "appinventor-components.jar"
+  ],
+  "variables": {
+    "package": "com.example.{{projectName}}",
+    "packagePath": "com/example/{{projectName}}",
+    "className": "{{projectName}}",
+    "description": "My UI Extension"
+  }
+}

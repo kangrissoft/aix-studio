@@ -1,0 +1,17 @@
+{
+  "name": "aix-studio-core",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Core library for AIX Studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "appinventor",
+    "extension",
+    "core"
+  ],
+  "author": "kangrissoft",
+  "license": "MIT"
+}

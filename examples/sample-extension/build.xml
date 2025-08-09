@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SampleExtension" default="package">
+  <property name="src.dir" value="src"/>
+  <property name="test.dir" value="test"/>
+  <property name="build.dir" value="build"/>
+  <property name="test.build.dir" value="build/test"/>
+  <property name="dist.dir" value="dist"/>
+  <property name="libs.dir" value="libs"/>
+  <property name="assets.dir" value="assets"/>
+  <property name="reports.dir" value="test-reports"/>
+  <property name="coverage.dir" value="coverage"/>
+
+  <!-- Classpath for compilation and testing -->
+  <path id="compile.classpath">
+    <fileset dir="${libs.dir}" includes="**/*.jar"/>
+  </path>
+
+  <path id="test.classpath">
+    <path refid="compile.classpath"/>
+    <pathelement location="${test.build.dir}"/>
+    <pathelement location="${build.dir}"/>
+    <fileset dir="${libs.dir}" includes="junit-*.jar"/>
+    <fileset dir="${libs.dir}" includes="hamcrest-*.jar"/>
+  </path>
+
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+    <delete dir="${test.build.dir}"/>
+    <delete dir="${reports.dir}"/>
+    <delete dir="${coverage.dir}"/>
+    <delete dir="${dist.dir}"/>
+  </target>
+
+  <target name="init">
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${test.build.dir}"/>
+    <mkdir dir="${reports.dir}"/>
+    <mkdir dir="${coverage.dir}"/>
+    <mkdir dir="${dist.dir}"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <!-- Compile main sources -->
+    <javac srcdir="${src.dir}" destdir="${build.dir}" 
+           includeantruntime="false" source="11" target="11" 
+           encoding="UTF-8">
+      <classpath refid="compile.classpath"/>
+    </javac>
+    
+    <!-- Compile test sources -->
+    <javac srcdir="${test.dir}" destdir="${test.build.dir}" 
+           includeantruntime="false" source="11" target="11" 
+           encoding="UTF-8">
+      <classpath refid="test.classpath"/>
+    </javac>
+  </target>
+
+  <target name="test" depends="compile" description="Run unit tests">
+    <junit printsummary="yes" haltonfailure="no" fork="true">
+      <classpath refid="test.classpath"/>
+      
+      <formatter type="xml"/>
+      <formatter type="plain"/>
+      
+      <batchtest todir="${reports.dir}">
+        <fileset dir="${test.dir}">
+          <include name="**/*Test.java"/>
+          <include name="**/*Tests.java"/>
+        </fileset>
+      </batchtest>
+    </junit>
+    
+    <junitreport todir="${reports.dir}">
+      <fileset dir="${reports.dir}">
+        <include name="TEST-*.xml"/>
+      </fileset>
+      <report format="frames" todir="${reports.dir}/html"/>
+    </junitreport>
+    
+    <echo message="Test reports generated in ${reports.dir}"/>
+  </target>
+
+  <target name="package" depends="compile" description="Package extension">
+    <jar destfile="${dist.dir}/${ant.project.name}.aix" basedir="${build.dir}">
+      <fileset dir="${assets.dir}" />
+      <manifest>
+        <attribute name="Built-By" value="AIX Studio Sample"/>
+        <attribute name="Created-By" value="AIX Studio"/>
+        <attribute name="Version" value="1.0.0"/>
+        <attribute name="Extension-Class" value="com.example.sample.SampleExtension"/>
+      </manifest>
+    </jar>
+    <echo message="Extension built: ${dist.dir}/${ant.project.name}.aix"/>
+  </target>
+
+  <target name="test-coverage" depends="compile" description="Run tests with coverage">
+    <echo message="Coverage testing requires JaCoCo. Make sure jacocoant.jar is in libs/"/>
+  </target>
+</project>

@@ -1,0 +1,24 @@
+{
+  "name": "Utility Extension (Kotlin)",
+  "description": "Utility/helper extension template using Kotlin",
+  "author": "AIX Studio Team",
+  "version": "1.0.0",
+  "language": "kotlin",
+  "category": "utility",
+  "files": [
+    "build.xml",
+    "src/{{packagePath}}/{{className}}.kt",
+    "assets/images/extension.png",
+    "README.md"
+  ],
+  "dependencies": [
+    "appinventor-components.jar",
+    "kotlin-stdlib-1.8.0.jar"
+  ],
+  "variables": {
+    "package": "com.example.{{projectName}}",
+    "packagePath": "com/example/{{projectName}}",
+    "className": "{{projectName}}",
+    "description": "My Kotlin Utility Extension"
+  }
+}

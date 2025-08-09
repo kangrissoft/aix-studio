@@ -1,0 +1,23 @@
+{
+  "name": "Component Extension (Java)",
+  "description": "Basic component extension template using Java",
+  "author": "AIX Studio Team",
+  "version": "1.0.0",
+  "language": "java",
+  "category": "component",
+  "files": [
+    "build.xml",
+    "src/{{packagePath}}/{{className}}.java",
+    "assets/images/extension.png",
+    "README.md"
+  ],
+  "dependencies": [
+    "appinventor-components.jar"
+  ],
+  "variables": {
+    "package": "com.example.{{projectName}}",
+    "packagePath": "com/example/{{projectName}}",
+    "className": "{{projectName}}",
+    "description": "My App Inventor Extension"
+  }
+}

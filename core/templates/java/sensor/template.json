@@ -1,0 +1,23 @@
+{
+  "name": "Sensor Extension (Java)",
+  "description": "Sensor-based extension template using Java",
+  "author": "AIX Studio Team",
+  "version": "1.0.0",
+  "language": "java",
+  "category": "sensor",
+  "files": [
+    "build.xml",
+    "src/{{packagePath}}/{{className}}.java",
+    "assets/images/extension.png",
+    "README.md"
+  ],
+  "dependencies": [
+    "appinventor-components.jar"
+  ],
+  "variables": {
+    "package": "com.example.{{projectName}}",
+    "packagePath": "com/example/{{projectName}}",
+    "className": "{{projectName}}",
+    "description": "My Sensor Extension"
+  }
+}

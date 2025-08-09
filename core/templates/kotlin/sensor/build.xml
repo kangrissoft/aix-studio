@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="{{projectName}}" default="package">
+  <property name="src.dir" value="src"/>
+  <property name="build.dir" value="build"/>
+  <property name="dist.dir" value="dist"/>
+  <property name="libs.dir" value="libs"/>
+  <property name="assets.dir" value="assets"/>
+  <property name="kotlin.version" value="1.8.0"/>
+
+  <!-- Kotlin compiler classpath -->
+  <path id="kotlin.classpath">
+    <fileset dir="${libs.dir}" includes="kotlin-*.jar"/>
+    <fileset dir="${libs.dir}" includes="appinventor-components.jar"/>
+    <fileset dir="${libs.dir}" includes="android.jar"/>
+  </path>
+
+  <!-- Kotlin compiler task definition -->
+  <taskdef resource="META-INF/services/org.jetbrains.kotlin.ant.KotlinAntTaskDef.xml" 
+           classpathref="kotlin.classpath"/>
+
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+    <delete dir="${dist.dir}"/>
+  </target>
+
+  <target name="init">
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${dist.dir}"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <!-- Compile Kotlin sources -->
+    <kotlinc src="${src.dir}" output="${build.dir}" classpathref="kotlin.classpath">
+      <compilerarg value="-jvm-target"/>
+      <compilerarg value="11"/>
+    </kotlinc>
+  </target>
+
+  <target name="package" depends="compile">
+    <jar destfile="${dist.dir}/${ant.project.name}.aix" basedir="${build.dir}">
+      <fileset dir="${assets.dir}" />
+      <manifest>
+        <attribute name="Built-By" value="{{author}}"/>
+        <attribute name="Created-By" value="AIX Studio"/>
+        <attribute name="Version" value="1.0.0"/>
+        <attribute name="Language" value="Kotlin"/>
+      </manifest>
+    </jar>
+    <echo message="Extension built: ${dist.dir}/${ant.project.name}.aix"/>
+  </target>
+</project>

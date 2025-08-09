@@ -1,0 +1,20 @@
+{
+  "name": "sample-extension",
+  "version": "1.0.0",
+  "description": "A sample App Inventor Extension for AIX Studio",
+  "private": true,
+  "scripts": {
+    "build": "ant package",
+    "test": "ant test",
+    "clean": "ant clean",
+    "docs": "echo 'Documentation generation would go here'"
+  },
+  "keywords": [
+    "appinventor",
+    "extension",
+    "sample",
+    "demo"
+  ],
+  "author": "AIX Studio Team",
+  "license": "MIT"
+}

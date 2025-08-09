@@ -1,0 +1,343 @@
+/* Layout Styles for AIX Studio */
+
+/* Main Layout */
+.aix-studio {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.aix-header {
+  height: 64px;
+  background-color: var(--white);
+  border-bottom: var(--border-width) var(--border-style) var(--gray-200);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-lg);
+  z-index: var(--z-sticky);
+  box-shadow: var(--shadow-sm);
+}
+
+.aix-header-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-right: var(--spacing-xl);
+}
+
+.aix-header-logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.aix-header-logo-text {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  color: var(--primary-color);
+}
+
+.aix-header-nav {
+  display: flex;
+  flex: 1;
+}
+
+.aix-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* Main Content Area */
+.aix-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Workspace */
+.aix-workspace {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Panels */
+.aix-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.aix-panel-header {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-bottom: var(--border-width) var(--border-style) var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aix-panel-title {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  margin: 0;
+}
+
+.aix-panel-content {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.aix-panel-resizer {
+  width: 4px;
+  background-color: var(--gray-200);
+  cursor: col-resize;
+  transition: background-color var(--transition-fast);
+}
+
+.aix-panel-resizer:hover {
+  background-color: var(--primary-color);
+}
+
+/* Tabbed Interface */
+.aix-tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.aix-tab-header {
+  border-bottom: var(--border-width) var(--border-style) var(--gray-200);
+  background-color: var(--gray-50);
+}
+
+.aix-tab-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.aix-tab-pane {
+  height: 100%;
+  display: none;
+}
+
+.aix-tab-pane.active {
+  display: block;
+}
+
+/* Split View */
+.aix-split-view {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.aix-split-view.vertical {
+  flex-direction: column;
+}
+
+.aix-split-view-pane {
+  overflow: hidden;
+  position: relative;
+}
+
+.aix-split-view-divider {
+  background-color: var(--gray-200);
+  position: relative;
+  z-index: 1;
+}
+
+.aix-split-view-divider.horizontal {
+  width: 4px;
+  cursor: col-resize;
+}
+
+.aix-split-view-divider.vertical {
+  height: 4px;
+  cursor: row-resize;
+}
+
+.aix-split-view-divider:hover {
+  background-color: var(--primary-color);
+}
+
+.aix-split-view-divider-handle {
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.aix-split-view-divider.horizontal .aix-split-view-divider-handle {
+  top: 50%;
+  left: -4px;
+  width: 12px;
+  height: 24px;
+  margin-top: -12px;
+}
+
+.aix-split-view-divider.vertical .aix-split-view-divider-handle {
+  left: 50%;
+  top: -4px;
+  width: 24px;
+  height: 12px;
+  margin-left: -12px;
+}
+
+/* Grid Layout */
+.aix-grid {
+  display: grid;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  height: 100%;
+}
+
+.aix-grid.auto-cols {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.aix-grid.card-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.aix-grid-item {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  border: var(--border-width) var(--border-style) var(--gray-200);
+  overflow: hidden;
+}
+
+/* Dashboard */
+.aix-dashboard {
+  padding: var(--spacing-lg);
+  overflow: auto;
+}
+
+.aix-dashboard-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.aix-dashboard-title {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-sm);
+}
+
+.aix-dashboard-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-lg);
+}
+
+.aix-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.aix-dashboard-stat-card {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.aix-dashboard-stat-value {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.aix-dashboard-stat-label {
+  font-size: var(--font-size-md);
+  opacity: 0.9;
+}
+
+.aix-dashboard-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.aix-dashboard-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.aix-dashboard-section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-900);
+}
+
+/* Responsive Layout */
+@media (max-width: var(--breakpoint-lg)) {
+  .aix-dashboard-stats {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .aix-dashboard {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: var(--breakpoint-md)) {
+  .aix-header {
+    padding: 0 var(--spacing-md);
+    height: 56px;
+  }
+  
+  .aix-header-logo-text {
+    font-size: var(--font-size-lg);
+  }
+  
+  .aix-dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .aix-grid.card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .aix-header {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .aix-dashboard {
+    padding: var(--spacing-sm);
+  }
+  
+  .aix-dashboard-stats {
+    gap: var(--spacing-md);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .aix-header,
+  .aix-sidebar,
+  .aix-toolbar,
+  .aix-status-bar {
+    display: none;
+  }
+  
+  .aix-main {
+    height: auto;
+  }
+  
+  .aix-panel {
+    box-shadow: none;
+    border: none;
+  }
+  
+  .aix-panel-content {
+    overflow: visible;
+  }
+}

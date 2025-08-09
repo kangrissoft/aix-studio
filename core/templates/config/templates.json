@@ -1,0 +1,78 @@
+{
+  "templates": {
+    "official": {
+      "java-component": {
+        "name": "Component Extension (Java)",
+        "description": "Basic component extension template using Java",
+        "author": "AIX Studio Team",
+        "version": "1.0.0",
+        "language": "java",
+        "category": "component",
+        "path": "java/component"
+      },
+      "java-sensor": {
+        "name": "Sensor Extension (Java)",
+        "description": "Sensor-based extension template using Java",
+        "author": "AIX Studio Team",
+        "version": "1.0.0",
+        "language": "java",
+        "category": "sensor",
+        "path": "java/sensor"
+      },
+      "java-ui": {
+        "name": "UI Extension (Java)",
+        "description": "User interface extension template using Java",
+        "author": "AIX Studio Team",
+        "version": "1.0.0",
+        "language": "java",
+        "category": "ui",
+        "path": "java/ui"
+      },
+      "java-util": {
+        "name": "Utility Extension (Java)",
+        "description": "Utility/helper extension template using Java",
+        "author": "AIX Studio Team",
+        "version": "1.0.0",
+        "language": "java",
+        "category": "utility",
+        "path": "java/util"
+      },
+      "kotlin-component": {
+        "name": "Component Extension (Kotlin)",
+        "description": "Basic component extension template using Kotlin",
+        "author": "AIX Studio Team",
+        "version": "1.0.0",
+        "language": "kotlin",
+        "category": "component",
+        "path": "kotlin/component"
+      },
+      "kotlin-sensor": {
+        "name": "Sensor Extension (Kotlin)",
+        "description": "Sensor-based extension template using Kotlin",
+        "author": "AIX Studio Team",
+        "version": "1.0.0",
+        "language": "kotlin",
+        "category": "sensor",
+        "path": "kotlin/sensor"
+      },
+      "kotlin-util": {
+        "name": "Utility Extension (Kotlin)",
+        "description": "Utility/helper extension template using Kotlin",
+        "author": "AIX Studio Team",
+        "version": "1.0.0",
+        "language": "kotlin",
+        "category": "utility",
+        "path": "kotlin/util"
+      }
+    },
+    "community": {}
+  },
+  "testTemplates": {
+    "java": "test/java",
+    "kotlin": "test/kotlin"
+  },
+  "buildTemplates": {
+    "java": "build/java-build.xml",
+    "kotlin": "build/kotlin-build.xml"
+  }
+}
